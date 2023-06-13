@@ -17,7 +17,7 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 		Set<String> carrinhoRetirada = new HashSet<String>();
 		
-		//Adiciona essa parte
+
 		List<String> produtosGeral = new ArrayList<String>();
 
 		List<Empresa> empresas = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Menu {
 		int opcao, numero = 0, cnpj, opcao2, cnpjSelecionado;
 		String nome, endereco, produto, telefone, produtoDesejado;
 
-		Empresa empresa1 = new Empresa("Padaria Gen", "Rua 22 - \nHorário para retirada 19:30hrs ás 20hrs ", 40028922);
+		Empresa empresa1 = new Empresa("Padaria Gen ", "Rua 22 - \nHorário para retirada 19:30hrs ás 20hrs ", 40028922);
 		Empresa empresa2 = new Empresa("Padaria Americanas", "Rua São João  \nHorário para retirada 20:30hrs ás 21hrs",
 				40028923);
 		Empresa empresa3 = new Empresa("Padaria +Doce", "Rua 50 - \nHorário para retirada 23:40hrs ás 23:55hrs",
@@ -125,7 +125,7 @@ public class Menu {
 
 					List<String> produtos = empresaSelecionada.getProdutos();
 
-					//Adiciona essa parte
+	
 					produtosGeral.addAll(produtos);
 
 					if (produtosGeral.contains(produtoDesejado)) {
@@ -167,7 +167,7 @@ public class Menu {
 						System.out.println(Cores.TEXT_WHITE_BOLD + "Digite o nome do produto ");
 						produto = leia.next();
 						
-						//Adiciona essa parte
+				
 						produtosGeral.add(produto);
 						
 						empresaSelecionada.adicionarProduto(produto);
@@ -178,8 +178,7 @@ public class Menu {
 					case 2 -> {
 						System.out.println(Cores.TEXT_WHITE_BOLD + "Digite o nome do produto ");
 						produto = leia.next();
-						
-						//Adiciona essa parte
+					
 						produtosGeral.remove(produto);
 						
 						empresaSelecionada.deletarProduto(produto);
